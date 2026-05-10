@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Dữ Liệu</title>
+    <style>
+        /* Đảm bảo trang web không có khoảng trắng thừa và iframe chiếm toàn màn hình */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Chống cuộn kép */
+            background-color: #f4f7f9;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbyV5eErd9w0rEhyrMKGEiwOiQoqc7mTLHo2X-YyrozT9nDuThZbs4-iDvIJllFet8zl/exec" 
+        allow="geolocation; microphone; camera; clipboard-write">
+    </iframe>
+
+</body>
+</html>
