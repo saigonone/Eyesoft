@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+  </head>
+<body>
+<div id="login-page" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; width: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  
+  <div class="card shadow-lg border-0 p-4" style="width: 100%; max-width: 420px; border-radius: 16px; background: #ffffff;">
+    <div class="card-body p-3">
+      
+      <div class="text-center mb-4">
+        <div class="d-inline-flex align-items-center justify-content-center mb-2" style="width: 100px; height: 20px; background-color: yellow; color: #0d6efd; border-radius: 50%;">
+          <i class="fas fa-glasses fa-2x"></i>
+        </div>
+        <h2  style="letter-spacing: 0.5px; color:red; font-size:50px; font-style:bold; font-family: 'Orbitron', sans-serif; font-weight: 800;">EyeSoft</h2>
+        <p style="color:blue;">Hệ thống quản trị mắt kính chuyên nghiệp</p>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label text-secondary small fw-bold">Tài khoản</label>
+        <div class="input-group">
+          <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 10px 0 0 10px;">
+            <i class="fas fa-user"></i>
+          </span>
+          <input type="text" id="user" class="form-control bg-light border-start-0 ps-0" placeholder="Nhập tài khoản..." style="border-radius: 0 10px 10px 0; box-shadow: none; height: 45px;">
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label text-secondary small fw-bold">Mật khẩu</label>
+        <div class="input-group">
+          <span class="input-group-text bg-light border-end-0 text-muted" style="border-radius: 10px 0 0 10px;">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input type="password" id="pass" class="form-control bg-light border-start-0 ps-0" placeholder="Nhập mật khẩu..." style="border-radius: 0 10px 10px 0; box-shadow: none; height: 45px;">
+        </div>
+      </div>
+
+      <button class="btn btn-primary w-100 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm" onclick="doLogin()" style="border-radius: 10px; height: 45px; transition: all 0.3s ease;">
+        <i class="fas fa-sign-in-alt"></i> ĐĂNG NHẬP
+      </button>
+
+      <div id="login-msg" class="text-center mt-3 small fw-bold" style="min-height: 20px;"></div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
