@@ -3,58 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>EyeSoft POS - Hệ Thống Quản Lý Kính Mắt</title>
-    <link rel="icon" type="image/png" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="EyeSoft POS">
-
-  <script>
-    // Tự tạo blob manifest để tránh lỗi file hệ thống
-    const manifest = {
-      "name": "EyeSoft POS",
-      "short_name": "EyeSoft",
-      "start_url": "./",
-      "display": "standalone",
-      "background_color": "#ffffff",
-      "theme_color": "#0d6efd",
-      "icons": [{ "src": "https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png", "sizes": "192x192", "type": "image/png" }]
-    };
-    const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
-    const link = document.createElement('link');
-    link.rel = 'manifest';
-    link.href = URL.createObjectURL(blob);
-    document.head.appendChild(link);
-  </script>
-  <link rel="apple-touch-icon" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
+    <title>EyeSoft POS - Phần Mềm Quản Lý Cửa Hàng Mắt Kính & Tròng Kính Chuyên Nghiệp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="EyeSoft POS - Giải pháp quản lý cửa hàng mắt kính số 1 Việt Nam. Tối ưu quản lý gọng kính, tròng kính sỉ & lẻ, báo cáo doanh thu thông minh, in hóa đơn QR tích hợp. Dùng thử miễn phí ngay!">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        /* Đảm bảo trang web không có khoảng trắng thừa và iframe chiếm toàn màn hình */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden; /* Chống cuộn kép */
-            background-color: #f4f7f9;
-        }
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        .hero-section { padding: 10px 0; background: linear-gradient(135deg, #0d6efd 30%, #0099ff 100%); color: white; }
+        .feature-icon { font-size: 3rem; color: #0099ff; }
+        .feature-card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; height: 100%; }
+        .feature-card:hover { transform: translateY(-10px); }
+        .lens-matrix-table td { font-family: monospace; }
+        .cta-box { background: #f8f9fa; border-radius: 10px; padding: 40px; }
+        html {
+  scroll-behavior: smooth;
+}
+   .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
         }
     </style>
 </head>
 <body>
 
-    <iframe 
-        src="https://script.google.com/macros/s/AKfycbwSUQrUAfKQbr83M7Z-ISc_acYfyWD6hjQJT7UoORzJ42ObusKmCi9D1THjqNbtNE96IQ/exec" 
-        allow="geolocation; microphone; camera; clipboard-write">
-    </iframe>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">EyeSoft POS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto text-uppercase small fw-bold">
+                <li class="nav-item"><a class="nav-link" href="giaiphap.html#giai-phap">Giải Pháp</a></li>
+                <li class="nav-item"><a class="nav-link active" href="banggia.html">Bảng Giá</a></li>
+                <li class="nav-item"><a class="nav-link" href="dichvu.html#dich-vu">Dịch Vụ</a></li>
+                <li class="nav-item"><a class="nav-link" href="khachang.html#khach-hang">Khách Hàng</a></li>
+            </ul>
+            <div class="d-flex">
+                <a href="login.html" class="btn btn-primary px-4 fw-bold rounded-pill">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold">EyeSoft POS: Tất cả trong 1 hệ thống</h1>
+        <p class="lead mb-4">Phần mềm mắt kính chuyên biệt, số một về quản lý tròng kính sỉ và lẻ, đáp ứng mọi quy mô cửa hàng.</p>
+       <img src="https://matkinhsaigonone.com/wp-content/uploads/2026/05/quy-trinh-phan-mem.png" alt="Quy trình tích hợp EyeSoft POS" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <a href="login.html" class="btn btn-light btn-lg px-5 py-3 fw-bold" style="margin-top:5px;">Trải Nghiệm Miễn Phí</a>
+    </div>
+</header>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 style="font-size:47px; text-align:center;">Một Nền Tảng, Mọi Giải Pháp</h2>
+        <div class="row g-5">
+            <div class="col-md-6">
+                <div class="card p-5 feature-card">
+                    <div class="text-center mb-4"><span class="feature-icon">🛍️</span></div>
+                    <h3>Tối Ưu Cho Bán Lẻ</h3>
+                    <p class="text-muted mb-4">Giao diện POS nhanh chóng, chính xác. Quản lý đơn hàng retail và khách hàng mượt mà.</p>
+                    <ul class="list-unstyled">
+                        <li>✅ Bán hàng siêu tốc chỉ với vài lần chạm</li>
+                        <li>✅ Nhập toa kính (prescription) chi tiết</li>
+                        <li>✅ Lưu thông tin khách hàng kèm độ cận loạn</li>
+                        <li>✅ Nắm rõ tổng tiền khách và số đơn mua hàng</li>
+                        <li>✅ In hóa đơn bán lẻ kèm thông tin độ và mã QR</li>
+                        <li>✅ Báo cáo doanh thu thời gian thực</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-5 feature-card">
+                    <div class="text-center mb-4"><span class="feature-icon">🤝</span></div>
+                    <h3>Chuyên Gia Bán Sỉ</h3>
+                    <p class="text-muted mb-4">Tích hợp mạng lưới sỉ mạnh mẽ. Quản lý khách buôn và đơn sỉ số lượng lớn tuyệt đối.</p>
+                    <ul class="list-unstyled">
+                        <li>✅ Phân nhóm khách sỉ, cài đặt bảng giá riêng</li>
+                        <li>✅ Theo dõi đơn hàng và công nợ sỉ chuyên sâu</li>
+                        <li>✅ Tạo Đơn Hàng sỉ lẻ ngay trên cùng 1 giao diện</li>
+                        <li>✅ Quản lý mạng lưới nhà phân phối</li>
+                        <li>✅ Up sản phẩm hàng loạt chỉ 1 lần chạm bằng AI</li>
+                        <li>✅ Hệ thống quản lý sỉ lẻ tròng kính chuyên sâu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section >
+    <div class="container">
+        <h2 style="font-size:47px; text-align:center;">Quản Lý Tròng Kính Vô Địch - Không Đối Thủ Sánh Bằng</h2>
+        <p class="text-center text-muted mb-5">Hệ thống EyeSoft POS được thiết kế chuyên biệt để xử lý mọi độ phức tạp của tròng kính mắt mắt, từ bán lẻ đến mạng lưới phân phối sỉ.</p>
+        
+        <div class="row g-5">
+            <div class="col-md-7">
+                <h3>Chi Tiết Ma Trận Tròng Kính</h3>
+                <p>Khác với các phần mềm bán hàng thông thường, EyeSoft POS cho phép quản lý chi tiết ma trận tròng kính với đầy đủ thông số: Độ Cận, Loạn, Trục, Chiết Suất, và Chất Liệu. Điều này là cốt lõi để quản lý tồn kho chính xác và bán hàng hiệu quả.</p>
+                <img src="https://matkinhsaigonone.com/wp-content/uploads/2026/05/QLkho-trong.png" alt="ma trận tròng kính EyeSoft POS" class="img-fluid border rounded my-4">
+            </div>
+            <div class="col-md-5">
+                <div class="lens-matrix-table table-responsive">
+                    <table class="table table-bordered table-striped align-middle">
+                        <thead>
+                            <tr class="table-primary" style="text-align:left;">
+                                <th>Thông Số</th>
+                                <th>EyeSoft POS</th>
+                                <th>Phần Mềm Thường</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="text-align:left;">
+                                <td>Độ Cận/Loạn</td>
+                                <td class="text-success">✅ Matrix chi tiết</td>
+                                <td class="text-danger">❌ Nhập thủ công</td>
+                            </tr>
+                            <tr style="text-align:left;">
+                                <td>Trục/Chiết Suất</td>
+                                <td class="text-success">✅ Tích hợp sâu</td>
+                                <td class="text-danger">❌ Không hỗ trợ</td>
+                            </tr>
+                            <tr style="text-align:left;">
+                                <td>Tồn Kho Theo Độ</td>
+                                <td class="text-success">✅ Tự động & Chính xác</td>
+                                <td class="text-danger">❌ Lỗi sai sót cao</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Hệ Thống Quản Lý Toàn Diện Khác</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-4 feature-card">
+                    <h3>🚀 Nhanh chóng</h3>
+                    <p>Xử lý đơn hàng mắt kính chỉ trong vài giây, tiết kiệm thời gian tối đa cho nhân viên.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 feature-card">
+                    <h3>📊 Báo cáo</h3>
+                    <p>Xem doanh thu, tồn kho theo thời gian thực với biểu đồ trực quan, dễ hiểu.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 feature-card">
+                    <h3>📱 Mọi lúc mọi nơi</h3>
+                    <p>Truy cập phần mềm mắt kính trên mọi thiết bị, từ điện thoại đến máy tính bảng.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row cta-box text-center shadow">
+            <div class="col-md-10 mx-auto">
+                <h2>Cài Đặt Thử Ngay Phần Mềm Quản Lý Tròng Kính Số Một Việt Nam</h2>
+                <p>Khám phá lý do tại sao EyeSoft POS là lựa chọn hàng đầu cho các cửa hàng mắt kính sỉ & lẻ. Bắt đầu ngay hôm nay để tối ưu doanh thu.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="login.html" class="btn btn-primary btn-lg">Sử Dụng Miễn Phí</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg">Xem Bảng Giá</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-5">
+    <div class="container">
+        <p>&copy; 2026 EyeSoft POS. All rights reserved.</p>
+        <a href="#" class="text-white mx-2">Chính Sách</a>
+        <a href="#" class="text-white mx-2">Điều Khoản</a>
+    </div>
+</footer>
 
 </body>
 </html>
