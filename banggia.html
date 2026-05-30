@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Giá Phần Mềm Mắt Kính EyeSoft POS | Gói Base & Pro Tiết Kiệm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Bảng giá EyeSoft POS cho cửa hàng mắt kính vừa và nhỏ. Gói Base chỉ từ 60k/tháng. Gói Pro quản lý tròng kính chuyên sâu không sai sót. Xem ngay!">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #0099ff;
+            --dark-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        /* Navbar Styling */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Hero Pricing Section */
+        .pricing-header {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        /* Pricing Card Styling */
+        .pricing-card {
+            border: none;
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.pro-plan {
+            border: 2px solid var(--primary-color);
+        }
+
+        .price-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            line-height: 1;
+        }
+
+        .billing-cycle {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Feature List Styling */
+        .feature-list {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.95rem;
+        }
+
+        .feature-list li i {
+            margin-right: 12px;
+            margin-top: 3px;
+        }
+
+        /* Multi-month box */
+        .duration-box {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .btn-cta {
+            border-radius: 50px;
+            padding: 14px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: #f8fafc;
+            padding: 60px 0;
+        }
+
+        .badge-popular {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">EyeSoft POS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto text-uppercase small fw-bold">
+                <li class="nav-item"><a class="nav-link" href="giaiphap.html#giai-phap">Giải Pháp</a></li>
+                <li class="nav-item"><a class="nav-link active" href="banggia.html">Bảng Giá</a></li>
+                <li class="nav-item"><a class="nav-link" href="dichvu.html#dich-vu">Dịch Vụ</a></li>
+                <li class="nav-item"><a class="nav-link" href="khachhang.html#khach-hang">Khách Hàng</a></li>
+            </ul>
+            <div class="d-flex">
+                <a href="login.html" class="btn btn-primary px-4 fw-bold rounded-pill">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="pricing-header text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Lựa Chọn Gói Cước Phù Hợp</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">
+            Đầu tư một lần, quản lý trọn đời. Hệ thống không giới hạn giúp bạn tập trung hoàn toàn vào việc phát triển doanh thu.
+        </p>
+    </div>
+</header>
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-5">
+                <div class="card h-100 shadow-sm pricing-card p-4">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold mb-1">GÓI BASE</h2>
+                            <p class="text-muted">Quản lý cửa hàng cơ bản</p>
+                            <div class="price-value">60.000đ</div>
+                            <div class="billing-cycle">thanh toán từ 1 năm</div>
+                        </div>
+
+                        <div class="duration-box">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Gói 6 tháng:</span>
+                                <span class="fw-bold">80.000đ/tháng</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Gói 3 tháng:</span>
+                                <span class="fw-bold">100.000đ/tháng</span>
+                            </div>
+                        </div>
+
+                        <ul class="feature-list mt-4">
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Không giới hạn</strong>&nbsp;thành viên</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Không giới hạn</strong>&nbsp;sản phẩm</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Quản lý sản phẩm & Khách hàng</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Quản lý công nợ khách hàng</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Quản lý nhà phân phối</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> In hóa đơn chuyên nghiệp với mã QR</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://zalo.me/0973819928" class="btn btn-outline-primary btn-cta w-100">Dùng thử miễn phí</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card h-100 shadow-lg pricing-card pro-plan p-4">
+                    <span class="badge-popular">KHUYÊN DÙNG</span>
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold mb-1 text-primary">GÓI PRO</h2>
+                            <p class="text-muted">Chuyên sâu tròng kính Sỉ & Lẻ</p>
+                            <div class="price-value">120.000đ</div>
+                            <div class="billing-cycle">thanh toán từ 1 năm</div>
+                        </div>
+
+                        <div class="duration-box bg-primary bg-opacity-10 border border-primary border-opacity-25 text-primary">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Gói 6 tháng:</span>
+                                <span class="fw-bold">140.000đ/tháng</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Gói 3 tháng:</span>
+                                <span class="fw-bold">150.000đ/tháng</span>
+                            </div>
+                        </div>
+
+                        <ul class="feature-list mt-4">
+                            <li><i class="bi bi-star-fill text-warning"></i> <strong>Bao gồm toàn bộ tính năng bản Base</strong></li>
+                            <li><i class="bi bi-star-fill text-warning"></i> <strong>Quản lý tròng kính chuyên sâu</strong></li>
+                            <li><i class="bi bi-check-circle-fill text-primary"></i> Ma trận độ Cận - Loạn - Trục chuyên nghiệp</li>
+                            <li><i class="bi bi-check-circle-fill text-primary"></i> Phân giá thông minh theo dải độ cận loạn cao</li>
+                            <li><i class="bi bi-check-circle-fill text-primary"></i> Cơ chế bán hàng linh hoạt Sỉ/Lẻ tròng kính</li>
+                            <li><i class="bi bi-check-circle-fill text-primary"></i> Chống sai sót 100% trong quản lý kho tròng</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://zalo.me/0973819928" class="btn btn-primary btn-cta w-100 shadow">Nâng cấp lên PRO ngay</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <h4 class="fw-bold mb-3">Cần hỗ trợ tư vấn trực tiếp?</h4>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="tel:0973819928" class="btn btn-dark btn-lg px-4 rounded-pill">
+                    <i class="bi bi-telephone-fill me-2"></i> Hotline: 0973.819.928
+                </a>
+                <a href="https://zalo.me/0973819928" class="btn btn-info text-white btn-lg px-4 rounded-pill">
+                    <i class="bi bi-chat-dots-fill me-2"></i> Zalo Kỹ Thuật
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-5">
+    <div class="container text-center">
+        <h3 class="fw-bold mb-4">EyeSoft POS</h3>
+        <p class="text-muted mb-4">Dẫn đầu giải pháp quản lý mắt kính tại Việt Nam</p>
+        <div class="social-links mb-4">
+            <a href="#" class="text-white mx-2 h4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white mx-2 h4"><i class="bi bi-youtube"></i></a>
+        </div>
+        <hr class="border-secondary opacity-25">
+        <p class="small text-muted mb-0">&copy; 2026 EyeSoft POS. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
