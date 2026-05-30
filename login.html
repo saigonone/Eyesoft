@@ -1,1 +1,61 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>EyeSoft POS - Hệ Thống Quản Lý Kính Mắt</title>
+    <link rel="icon" type="image/png" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="EyeSoft POS">
+
+  <script>
+    // Tự tạo blob manifest để tránh lỗi file hệ thống
+    const manifest = {
+      "name": "EyeSoft POS",
+      "short_name": "EyeSoft",
+      "start_url": "./",
+      "display": "standalone",
+      "background_color": "#ffffff",
+      "theme_color": "#0d6efd",
+      "icons": [{ "src": "https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png", "sizes": "192x192", "type": "image/png" }]
+    };
+    const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
+    const link = document.createElement('link');
+    link.rel = 'manifest';
+    link.href = URL.createObjectURL(blob);
+    document.head.appendChild(link);
+  </script>
+  <link rel="apple-touch-icon" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
+    <style>
+        /* Đảm bảo trang web không có khoảng trắng thừa và iframe chiếm toàn màn hình */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Chống cuộn kép */
+            background-color: #f4f7f9;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbwSUQrUAfKQbr83M7Z-ISc_acYfyWD6hjQJT7UoORzJ42ObusKmCi9D1THjqNbtNE96IQ/exec" 
+        allow="geolocation; microphone; camera; clipboard-write">
+    </iframe>
+
+</body>
+</html>
