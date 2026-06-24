@@ -6,6 +6,23 @@
          <link rel="icon" type="image/png" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png">
     <title>Chăm sóc khách hàng - EyeSoft</title>
+    <script>
+    // Tự tạo blob manifest để tránh lỗi file hệ thống
+    const manifest = {
+      "name": "EyeSoft CSKH",
+      "short_name": "EyeSoftKH",
+      "start_url": "./",
+      "display": "standalone",
+      "background_color": "#ffffff",
+      "theme_color": "#0d6efd",
+      "icons": [{ "src": "https://matkinhsaigonone.com/wp-content/uploads/2026/05/Favicon_Eyesoft.png", "sizes": "192x192", "type": "image/png" }]
+    };
+    const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
+    const link = document.createElement('link');
+    link.rel = 'manifest';
+    link.href = URL.createObjectURL(blob);
+    document.head.appendChild(link);
+  </script>
     <style>
         body, html { margin:0; padding:0; height:100%; width:100%; overflow:hidden; }
         #cskhFrame { width:100%; height:100%; border:none; }
